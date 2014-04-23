@@ -11,7 +11,7 @@ class BigArray
 	private $pass = '123456';
 	private $db = 'age';
 
-    public $maxsize = 10000;
+    public $maxsize = 100000;
 
 	function __construct()
 	{
