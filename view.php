@@ -28,7 +28,7 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript">
-    $().ready({
+    $( document ).ready(function() {
       $.getJSON('students.php', function(data) {
               var table='<table>';
               table+='<tr><th>Id</td><td>Name</td><td>Grade</td></tr>'; 
