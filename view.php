@@ -18,6 +18,10 @@
   </head>
   <body>
     <h1>Hello, world!</h1>
+    <div id="content">
+
+    </div>
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -25,12 +29,13 @@
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript">
     $().ready({
-      $.getJSON('loadjson.php', function(data) {
+      $.getJSON('students.php', function(data) {
               var table='<table>';
+              table+='<tr><th>Id</td><td>Name</td><td>Grade</td></tr>'; 
               /* loop over each object in the array to create rows*/
               $.each( data, function( index, item){
                     /* add to html string started above*/
-               table+='<tr><td>'+item.team +'</td><td>'+item.mvp+'</td></tr>';       
+               table+='<tr><td>'+item.id +'</td><td>'+item.name+'</td><td>'+item.grade+'</td></tr>';       
               });
               table+='</table>';
         /* insert the html string*/
